@@ -1,0 +1,15 @@
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+models/*
+!models/.gitkeep
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+.DS_Store
+Thumbs.db
+.idea/
