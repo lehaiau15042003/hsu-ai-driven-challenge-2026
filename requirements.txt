@@ -1,9 +1,8 @@
-pandas>=1.5.
+pandas>=1.5.0
 numpy>=1.20.0
 
 underthesea>=6.0.0
 pyvi>=0.1.1
-
 
 scikit-learn>=1.0.0
 
@@ -12,6 +11,10 @@ transformers>=4.30.0
 datasets>=2.12.0
 accelerate>=0.20.0
 
+# Translation pipeline
+sentencepiece>=0.1.99
+sacremoses>=0.0.53
+tqdm>=4.65.0
 
 fastapi>=0.100.0
 uvicorn>=0.22.0
