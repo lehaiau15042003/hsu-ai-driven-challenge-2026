@@ -10,13 +10,13 @@ import pandas as pd
 class BaseModel(ABC):
     @abstractmethod
     def train(self, X_train: pd.Series, y_train: pd.Series) -> None:
-        
+        pass
     @abstractmethod
     def predict(self, X: pd.Series) -> np.ndarray:
-
+        pass
     @abstractmethod
     def evaluate(self, X: pd.Series, y_true: pd.Series) -> dict[str, Any]:
-
+        pass
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}()"
 
@@ -24,9 +24,9 @@ class BaseModel(ABC):
     def load(self):
         pass
 
-    @abstractmethod
-    def predict(self, prompt: str):
-        pass
+    # @abstractmethod
+    # def predict(self, prompt: str):
+    #     pass
 
     @abstractmethod
     def unload(self):
