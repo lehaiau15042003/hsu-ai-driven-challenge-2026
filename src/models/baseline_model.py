@@ -1,22 +1,3 @@
-"""
-src/models/baseline_model.py
-Baseline model: TF-IDF vectorizer + Logistic Regression (scikit-learn).
-
-Pipeline:
-    1. TF-IDF (char n-grams + word n-grams, sublinear TF) to vectorize prompt text.
-    2. Logistic Regression (class_weight='balanced') as classifier.
-    3. Evaluate on validation set → prints F1-Score and Accuracy.
-
-Usage (standalone):
-    python -m src.models.baseline_model
-
-Usage (as module):
-    from src.models.baseline_model import TFIDFBaselineModel
-    model = TFIDFBaselineModel()
-    model.train(X_train, y_train)
-    metrics = model.evaluate(X_val, y_val)
-"""
-
 from __future__ import annotations
 
 import os

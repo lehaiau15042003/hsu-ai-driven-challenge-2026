@@ -3,11 +3,13 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 class Metrics:
     @staticmethod
     def latency(start_time, end_time, num_samples):
+        # Tính độ trễ trung bình cho mỗi câu (đơn vị: mili-giây)
         total_time_seconds = end_time - start_time
         return (total_time_seconds / num_samples) * 1000
 
     @staticmethod
     def throughput(num_samples, start_time, end_time):
+        # Tính số câu xử lý được trong 1 giây
         total_time_seconds = end_time - start_time
         if total_time_seconds == 0:
             return 0
@@ -25,3 +27,7 @@ class Metrics:
             "recall": recall_score(y_true, y_pred, zero_division=0),
             "f1": f1_score(y_true, y_pred, average="macro")
         }
+
+    @staticmethod
+    def resource_usage():
+        pass
